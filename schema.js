@@ -142,16 +142,16 @@ const CoresTypes = new GraphQLObjectType({
 
 //// MUTATIONS
 
-const MutationQuery = new GraphQLObjectType({
-  name: "RootMutation",
-  fields: {
-    createEvent: {
-        name: "name",
-        type: GraphQLString,
-        args: { name: { type: new GraphQLNonNull(GraphQLString) } }
-      }
-  }
-});
+// const MutationQuery = new GraphQLObjectType({
+//   name: "RootMutation",
+//   fields: {
+//     createEvent: {
+//         name: "name",
+//         type: GraphQLString,
+//         args: { name: { type: new GraphQLNonNull(GraphQLString) } }
+//       }
+//   }
+// });
 
 ////////////////////// Root Query
 
@@ -251,33 +251,33 @@ const RootQuery = new GraphQLObjectType({
           .then(res => res.data);
       }
     },
-    posts: {
-      type: new GraphQLList(PostType),
-      // TODO: THIS WITH ASYNC AWAIT !!!!!!!!!!!!!!
-      resolve(parent, args) {
-        return axios
-          .get("http://localhost:3001/posts") /// todo ?
-          .then(res => res.data);
-      }
-    },
-    post: {
-      type: PostsType,
-      args: {
-        id: { type: GraphQLString }
-      },
-      resolve(parent, args) {
-        return axios
-          .get(`http://localhost:3001/posts/${args.id}`)
-          .then(res => res.data);
-      }
+    // posts: {
+    //   type: new GraphQLList(PostType),
+    //   // TODO: THIS WITH ASYNC AWAIT !!!!!!!!!!!!!!
+    //   resolve(parent, args) {
+    //     return axios
+    //       .get("http://localhost:3001/posts") /// todo ?
+    //       .then(res => res.data);
+    //   }
+    // },
+    // post: {
+    //   type: PostsType,
+    //   args: {
+    //     id: { type: GraphQLString }
+    //   },
+    //   resolve(parent, args) {
+    //     return axios
+    //       .get(`http://localhost:3001/posts/${args.id}`)
+    //       .then(res => res.data);
+    //   }
       
-    }
+    // }
   }
 });
 
 module.exports = new GraphQLSchema({
   query: RootQuery,
-  mutation: MutationQuery
+  // mutation: MutationQuery
   // mutation: RootMutation
   /// here I can put something else like mutations and ++
 });
