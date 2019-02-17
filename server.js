@@ -59,7 +59,7 @@ connectWithRetry();
 const app = express();
 app.use(morgan("combined"));
 app.use(cors());
-app.use(bodyParser.json({ type: "*/*" })); // to fix the types when i upload img ...
+app.use(bodyParser.json()); // to fix the types when i upload img ...
 router(app);
       app.use(
         "/graphql",
