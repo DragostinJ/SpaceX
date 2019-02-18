@@ -1,9 +1,22 @@
-.pop-up {
-  display: inline;
-  background-color: wheat;
-  padding: -25px;
+.container1 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 3px solid red;
+  margin: 120px 30px 20px 290px ;
+  background-color: aqua;
+  z-index: 10;
+  display: block;
+  list-style: none;
+  /* border-radius: 50%; */
+  color: beige;
+  background-color: black;
 }
-.pop-up-wrap {
-  width: 80%;
-  height: 30px;
+.li-pop-up {
+  margin-top: 20px;
+  border-bottom: 2px solid red
+}
+.span-li {
+  color: aqua ;
+  padding-left: 35px;
 }

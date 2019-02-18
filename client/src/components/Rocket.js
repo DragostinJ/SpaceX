@@ -3,7 +3,7 @@ import gql from "graphql-tag";
 
 import { Query } from "react-apollo";
 import { Link } from "react-router-dom";
-import Popup from 'reactjs-popup'
+
 
 import "../css/Rocket.css";
 
@@ -98,7 +98,7 @@ export class Rocket extends Component {
                   </div>
                   <h4 className="mb-4">Rocket Details:</h4>
                   <ul className="list-group">
-                    <li className="list-group-item">
+                    <li className="wi2d list-group-item">
                       Rocket Type: {rocket_type}
                     </li>
                     <li className="list-group-item">
@@ -120,16 +120,18 @@ export class Rocket extends Component {
                     
                     <li className="list-group-item">Company: {company}</li>
                     {!this.state.isHidden && (
-                     
-                     <ul className="pop-up-wrap">
+                     <div className="container1">
                        
-                       <li className="pop-up">Version: {version}</li>
-                       <li className="pop-up">Layout: {layout}</li>
-                       <li className="pop-up">Type: {type}</li>
-                       <li className="pop-up">Engine Loss Maxmber: {engine_loss_maxmber}</li>
-                       <li className="pop-up">Propellant_1: {propellant_1}</li>
-                       <li className="pop-up">Propellant 2: {propellant_2}</li>
-                     </ul>
+                       {/* <ul className="pop-up-wrap"> */}
+                         
+                         <li className="li-pop-up"><span className="span-li">Version:</span> {version}</li>
+                         <li className="li-pop-up"><span className="span-li">Layout:</span> {layout}</li>
+                         <li className="li-pop-up"><span className="span-li">Type: </span>{type}</li>
+                         <li className="li-pop-up"><span className="span-li">Engine Loss Maxmber:</span> {engine_loss_maxmber}</li>
+                         <li className="li-pop-up"><span className="span-li">Propellant_1:</span> {propellant_1}</li>
+                         <li className="li-pop-up"><span className="span-li">Propellant 2:</span> {propellant_2}</li>
+                       {/* </ul> */}
+                     </div>
                   
                    )}
                     
