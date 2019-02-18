@@ -34,7 +34,7 @@ class Launches extends React.Component {
             if (loading) return <h4>Loading ...</h4>; // TODO: add a spinner
           
             if (error) console.log(error);
-            console.log(data);
+       
             return (
                 <Fragment>
                     {

@@ -1,9 +1,9 @@
-/* .rocket-container {
-    background-image: url(../images/space.png);
-    position: fixed; 
-  top: 0; 
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-
-} */
+.pop-up {
+  display: inline;
+  background-color: wheat;
+  padding: -25px;
+}
+.pop-up-wrap {
+  width: 80%;
+  height: 30px;
+}

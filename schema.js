@@ -104,14 +104,31 @@ const RocketType = new GraphQLObjectType({
   name: "Rocket",
   fields: () => ({
     rocket_id: { type: GraphQLString },
+    active: {type: GraphQLBoolean},
+    boosters: {type: GraphQLInt},
+    cost_per_launch: {type: GraphQLString},
+    success_rate_pct: {type: GraphQLInt},
+    first_flight: {type: GraphQLString},
     rocket_name: { type: GraphQLString },
     rocket_type: { type: GraphQLString },
     first_stage: { type: StageOne },
     stages: { type: GraphQLInt },
     country: { type: GraphQLString },
-    company: { type: GraphQLString }
+    company: { type: GraphQLString },
+    engines: {type: EngineType}
   })
 });
+const EngineType = new GraphQLObjectType({
+  name: "Engine",
+  fields: () => ({
+    type: {type: GraphQLString},
+    version: {type: GraphQLString},
+    layout: {type: GraphQLString},
+    engine_loss_maxmber: {type: GraphQLInt},
+    propellant_1: {type: GraphQLString},
+    propellant_2: {type: GraphQLString}
+  })
+})
 
 const StageOne = new GraphQLObjectType({
   name: "StageOne",

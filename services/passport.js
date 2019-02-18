@@ -10,7 +10,7 @@ const localOptions = {usernameField: 'email'}
 const localLogin = new LocalStorage(localOptions, function(email, passport, done) {
 //verify that we have THat user 
 User.findOne({email: email}, function(err, user){
-    if(err) {return one(err)}  //error handling
+    if(err) {return done(err)}  //error handling
 
     if(!user) {return done(null, false)} // no user =   no error no user
     // compare passwords - is password = user.password
