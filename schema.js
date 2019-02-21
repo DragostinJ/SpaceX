@@ -76,7 +76,7 @@ const LaunchType = new GraphQLObjectType({
     core_serial: { type: GraphQLString },
     rocket_name: { type: GraphQLString },
     rocket: { type: RocketType }
-    // start_date: {type: ? }
+
   })
 });
 // PAYLOAD TYPE
@@ -104,58 +104,49 @@ const RocketType = new GraphQLObjectType({
   name: "Rocket",
   fields: () => ({
     rocket_id: { type: GraphQLString },
-    active: {type: GraphQLBoolean},
-    boosters: {type: GraphQLInt},
-    cost_per_launch: {type: GraphQLString},
-    success_rate_pct: {type: GraphQLInt},
-    first_flight: {type: GraphQLString},
+    active: { type: GraphQLBoolean },
+    boosters: { type: GraphQLInt },
+    cost_per_launch: { type: GraphQLString },
+    success_rate_pct: { type: GraphQLInt },
+    first_flight: { type: GraphQLString },
     rocket_name: { type: GraphQLString },
     rocket_type: { type: GraphQLString },
     first_stage: { type: StageOne },
     stages: { type: GraphQLInt },
     country: { type: GraphQLString },
     company: { type: GraphQLString },
-    engines: {type: EngineType}
+    engines: { type: EngineType },
+    height: { type: HeightType }
+  })
+});
+const HeightType = new GraphQLObjectType({
+  name: "HeightType",
+  fields: () => ({
+    meters: { type: GraphQLFloat },
+    feet: { type: GraphQLFloat }
   })
 });
 const EngineType = new GraphQLObjectType({
   name: "Engine",
   fields: () => ({
-    type: {type: GraphQLString},
-    version: {type: GraphQLString},
-    layout: {type: GraphQLString},
-    engine_loss_maxmber: {type: GraphQLInt},
-    propellant_1: {type: GraphQLString},
-    propellant_2: {type: GraphQLString}
+    type: { type: GraphQLString },
+    version: { type: GraphQLString },
+    layout: { type: GraphQLString },
+    engine_loss_maxmber: { type: GraphQLInt },
+    propellant_1: { type: GraphQLString },
+    propellant_2: { type: GraphQLString }
   })
-})
+});
 
 const StageOne = new GraphQLObjectType({
   name: "StageOne",
   fields: () => ({
-    cores: {
-      type: CoresTypes
-    }
+    reusable: { type: GraphQLBoolean },
+    engines: { type: GraphQLInt },
+    burn_time_sec: { type: GraphQLInt }
   })
 });
 
-const CoresTypes = new GraphQLObjectType({
-  name: "CoresType",
-  fields: {
-    core_serial: { type: GraphQLString },
-    reused: { type: GraphQLBoolean },
-    land_succssess: { type: GraphQLInt },
-    landing_intent: { type: GraphQLBoolean }
-  }
-});
-
-// TODO SECOND STAGE
-// const StageTwo = new GraphQLObjectType({
-//     name: 'StageTwo',
-//     fields: ()=> ({
-
-//     })
-// })
 
 //// MUTATIONS
 
@@ -267,33 +258,13 @@ const RootQuery = new GraphQLObjectType({
           .get(`https://api.spacexdata.com/v3/rockets/${args.id}`)
           .then(res => res.data);
       }
-    },
-    // posts: {
-    //   type: new GraphQLList(PostType),
-    //   // TODO: THIS WITH ASYNC AWAIT !!!!!!!!!!!!!!
-    //   resolve(parent, args) {
-    //     return axios
-    //       .get("http://localhost:3001/posts") /// todo ?
-    //       .then(res => res.data);
-    //   }
-    // },
-    // post: {
-    //   type: PostsType,
-    //   args: {
-    //     id: { type: GraphQLString }
-    //   },
-    //   resolve(parent, args) {
-    //     return axios
-    //       .get(`http://localhost:3001/posts/${args.id}`)
-    //       .then(res => res.data);
-    //   }
-      
-    // }
+    }
+   
   }
 });
 
 module.exports = new GraphQLSchema({
-  query: RootQuery,
+  query: RootQuery
   // mutation: MutationQuery
   // mutation: RootMutation
   /// here I can put something else like mutations and ++

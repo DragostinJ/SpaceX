@@ -49,14 +49,14 @@ export class Payload extends React.Component {
               payload_type,
               payload_mass_kg,
               payload_mass_lbs,
-              // orbit_params: {
-              //   refere4nce_system,
-              //   regime,
-              //   longitude,
-              //   somi_major_axis_km,
-              //   periapsis_km,
-              //   apoapsis_km
-              // }
+              orbit_params: {
+                refere4nce_system,
+                regime,
+                longitude,
+                somi_major_axis_km,
+                periapsis_km,
+                apoapsis_km
+              }
             } = data.payload;
 
             console.log(data.payload);
@@ -67,16 +67,28 @@ export class Payload extends React.Component {
                   <li className="list-group-item ">Payload :{payload_id}</li>
                   <li className="list-group-item">Reused: {reused}</li>
                   <li className="list-group-item">Customers: {customers}</li>
-                  <li className="list-group-item">Nationality: {nationality}</li>
-                  <li className="list-group-item">Manufacturer: {manufacturer}</li>
-                  <li className="list-group-item">Payload Type: {payload_type}</li>
-                  <li className="list-group-item">Payload in kg: {payload_mass_kg}</li>
-                  <li className="list-group-item">Payload in lbs: {payload_mass_lbs}</li>
-                
-                
+                  <li className="list-group-item">
+                    Nationality: {nationality}
+                  </li>
+                  <li className="list-group-item">
+                    Manufacturer: {manufacturer}
+                  </li>
+                  <li className="list-group-item">
+                    Payload Type: {payload_type}
+                  </li>
+                  <li className="list-group-item">
+                    Payload in kg: {payload_mass_kg}
+                  </li>
+                  <li className="list-group-item">
+                    Payload in lbs: {payload_mass_lbs}
+                  </li>
+                  <li className="list-group-item">
+                    Orbit params: Longitude:{longitude}
+                    Apoapsis_km: {apoapsis_km}
+                  </li>
                 </ul>
-              {/* build orbit details popup  */}
-                
+                {/* build orbit details popup  */}
+
                 <hr />
                 <Link to="/payloads" className="btn btn-secondary">
                   Back

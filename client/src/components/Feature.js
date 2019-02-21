@@ -5,7 +5,10 @@ import requireAuth from './navigation/requireAuth'
 class Feature extends React.Component {
 
     render() { 
-        return ( <div>Black Rockets Market</div> );
+        return ( 
+        <div>
+           Rockets Black Market
+            </div> );
     }
 }
  

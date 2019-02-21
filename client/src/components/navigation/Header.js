@@ -8,15 +8,24 @@ class Header extends React.Component {
     if (this.props.authenticated) {
       return (
         <div>
-          <Link to="/signout">Sign Out</Link>
-          <Link to="/feature">Feature </Link>
+          <Link className="btn btn-secondary px-4 mx-4" to="/signout">
+            Sign Out
+          </Link>
+          <Link className="btn btn-secondary px-4 mx-4" to="/feature">
+            Feature{" "}
+          </Link>
         </div>
       );
     } else {
       return (
         <div>
-          <Link to="/signin">Sign In</Link>
-          <Link to="/signup">Sign Up</Link>
+          <Link className="btn btn-secondary px-4 mx-4" to="/signin">
+            Sign In
+          </Link>
+          <Link className="btn btn-secondary px-4 mx-4" to="/signup">
+            Sign Up
+          </Link>
+          <hr/>
         </div>
       );
     }
@@ -25,8 +34,9 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <Link to="/">Redux Auth</Link>
+        <Link className="btn btn-secondary px-4 mx-4" to="/">Home</Link>
         {this.renderLinks()}
+        <hr/>
       </div>
     );
   }

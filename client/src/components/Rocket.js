@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import gql from "graphql-tag";
 
 import { Query } from "react-apollo";
 import { Link } from "react-router-dom";
-
 
 import "../css/Rocket.css";
 
@@ -20,6 +19,10 @@ const ROCKET_QUERY = gql`
       rocket_type
       stages
       country
+      height {
+        meters
+        feet
+      }
       company
       engines {
         version
@@ -42,8 +45,7 @@ export class Rocket extends Component {
       isHidden: !this.state.isHidden
     });
   }
-  
-  
+
   render() {
     let { rocket_id } = this.props.match.params;
 
@@ -72,17 +74,17 @@ export class Rocket extends Component {
               stages,
               company,
               country,
+              height: { meters, feet },
               engines: {
-                 version,
+                version,
                 layout,
                 type,
                 engine_loss_maxmber,
                 propellant_1,
                 propellant_2
-                }
+              }
             } = data.rocket;
-            
-          
+
             return (
               <div>
                 <div>
@@ -94,13 +96,23 @@ export class Rocket extends Component {
                     {/* <button onClick={this.toggleHidden.bind(this)}>
                      
                     </button> */}
-                    
                   </div>
                   <h4 className="mb-4">Rocket Details:</h4>
                   <ul className="list-group">
                     <li className="wi2d list-group-item">
-                      Rocket Type: {rocket_type}
+                      Rocket Height: {meters} Meters or {feet} Feet
                     </li>
+                    {{ active } && (
+                      <li className="list-group-item">
+                        <span
+                          className={
+                            "text-" + ({ active } ? "success" : "danger")
+                          }
+                        >
+                          Active
+                        </span>
+                      </li>
+                    )}
                     <li className="list-group-item">
                       Rocket Type: {rocket_id}
                     </li>
@@ -110,41 +122,56 @@ export class Rocket extends Component {
                       Cost per launch: {cost_per_launch}
                     </li>
 
-                    <li  className="list-group-item">
+                    <li className="list-group-item">
                       Success Rate: {success_rate_pct}
                     </li>
                     <li className="list-group-item">
                       First Flight: {first_flight}
                     </li>
                     <li className="list-group-item">Company: {company}</li>
-                    
-                    <li className="list-group-item">Company: {company}</li>
-                    {!this.state.isHidden && (
-                     <div className="container1">
-                       
-                       {/* <ul className="pop-up-wrap"> */}
-                         
-                         <li className="li-pop-up"><span className="span-li">Version:</span> {version}</li>
-                         <li className="li-pop-up"><span className="span-li">Layout:</span> {layout}</li>
-                         <li className="li-pop-up"><span className="span-li">Type: </span>{type}</li>
-                         <li className="li-pop-up"><span className="span-li">Engine Loss Maxmber:</span> {engine_loss_maxmber}</li>
-                         <li className="li-pop-up"><span className="span-li">Propellant_1:</span> {propellant_1}</li>
-                         <li className="li-pop-up"><span className="span-li">Propellant 2:</span> {propellant_2}</li>
-                       {/* </ul> */}
-                     </div>
-                  
-                   )}
-                    
-                    <li  onClick={this.toggleHidden.bind(this)} className="list-group-item">Engine:</li>
-                    
+
+                    <li
+                     
+                      className="list-group-item"
+                    >
+                      Country: {country}
+                    </li>
+
+                    <li
+                      onMouseEnter={this.toggleHidden.bind(this)}
+                      onMouseLeave={this.toggleHidden.bind(this)}
+                      className="list-group-item"
+                    >
+                    {/* WHAT ABOUT MOBILE ? */}
+                      Engine:{" "}
+                      {!this.state.isHidden && (
+                        <Fragment>
+                          <span className="span-li">Version: {version}</span>
+
+                          <span className="span-li">Layout: {layout}</span>
+
+                          <span className="span-li">Type: {type} </span>
+
+                          <span className="span-li">
+                            Engine Loss Maxmber: {engine_loss_maxmber}
+                          </span>
+
+                          <span className="span-li">
+                            Propellant_1: {propellant_1}
+                          </span>
+
+                          <span className="span-li">
+                            Propellant 2: {propellant_2}
+                          </span>
+                        </Fragment>
+                      )}
+                    </li>
                   </ul>
-               
+
                   <hr />
                   <Link to="/rockets" className="btn btn-secondary">
                     Back
-                    
                   </Link>
-
                 </div>
               </div>
             );
