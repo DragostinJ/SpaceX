@@ -63,15 +63,15 @@ export class Payload extends React.Component {
 
             return (
               <div>
-                <ul class="list-group">
-                  <li class="list-group-item ">Payload :{payload_id}</li>
-                  <li class="list-group-item">Reused: {reused}</li>
-                  <li class="list-group-item">Customers: {customers}</li>
-                  <li class="list-group-item">Nationality: {nationality}</li>
-                  <li class="list-group-item">Manufacturer: {manufacturer}</li>
-                  <li class="list-group-item">Payload Type: {payload_type}</li>
-                  <li class="list-group-item">Payload in kg: {payload_mass_kg}</li>
-                  <li class="list-group-item">Payload in lbs: {payload_mass_lbs}</li>
+                <ul className="list-group">
+                  <li className="list-group-item ">Payload :{payload_id}</li>
+                  <li className="list-group-item">Reused: {reused}</li>
+                  <li className="list-group-item">Customers: {customers}</li>
+                  <li className="list-group-item">Nationality: {nationality}</li>
+                  <li className="list-group-item">Manufacturer: {manufacturer}</li>
+                  <li className="list-group-item">Payload Type: {payload_type}</li>
+                  <li className="list-group-item">Payload in kg: {payload_mass_kg}</li>
+                  <li className="list-group-item">Payload in lbs: {payload_mass_lbs}</li>
                 
                 
                 </ul>
