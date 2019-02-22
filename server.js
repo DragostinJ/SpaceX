@@ -42,7 +42,7 @@ const router = require("./router");
 const connectWithRetry = () => {
   console.log("MongoDB connection with retry");
   mongoose
-    .connect("mongodb://127.0.0.1:27017/mongoPlay", { useNewUrlParser: true })
+    .connect("mongodb://localhost:27017/mongoPlay", { useNewUrlParser: true })
     .then(() => {
       console.log("MongoDB is connected");
     })
