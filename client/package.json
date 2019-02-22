@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "homepage": "http://dragostinj.github.io/spacex",
   "private": true,
+  "engines": {
+"npm": "6.8.0",
+"node": "9.10.1"
+  },
   "dependencies": {
     "apollo-boost": "^0.1.27",
     "axios": "^0.18.0",
