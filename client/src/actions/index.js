@@ -4,7 +4,7 @@ import { AUTH_USER, AUTH_ERROR } from "./types";
 export const signup = (formProps, callback) => async dispatch => {
   try {
     const response = await axios.post(
-      "/signup",
+      "https://young-garden-82503.herokuapp.com/signup",
       formProps
     );
 
@@ -18,7 +18,7 @@ export const signup = (formProps, callback) => async dispatch => {
 export const signin = (formProps, callback) => async dispatch => {
   try {
     const response = await axios.post(
-      "/signin",
+      "https://young-garden-82503.herokuapp.com/signin",
       formProps
     );
 

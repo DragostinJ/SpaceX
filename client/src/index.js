@@ -32,7 +32,7 @@ const store = createStore(
   applyMiddleware(reduxThunk)
 );
 const client = new ApolloClient({
-  uri: "http://localhost:5000/graphql"
+  uri: "https://young-garden-82503.herokuapp.com/graphql"
 });
 
 ReactDOM.render(
