@@ -83,8 +83,8 @@ export class Payload extends React.Component {
                     Payload in lbs: {payload_mass_lbs}
                   </li>
                   <li className="list-group-item">
-                    Orbit params: Longitude:{longitude}
-                    Apoapsis_km: {apoapsis_km}
+                    Orbit params: Longitude:{longitude} {"  "} 
+                    Apoapsis_km:  {apoapsis_km}
                   </li>
                 </ul>
                 {/* build orbit details popup  */}
