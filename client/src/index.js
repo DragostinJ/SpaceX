@@ -36,9 +36,9 @@ const client = new ApolloClient({
 });
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
-    <Provider store={store}>
+  <Provider store={store}>
       <BrowserRouter>
+  <ApolloProvider client={client}>
         <App>
           <div className="container">
             <Route exact path="/" component={Welcome} />
@@ -56,8 +56,8 @@ ReactDOM.render(
             <Route exact path="/feature" component={Feature} />
           </div>
         </App>
+  </ApolloProvider>
       </BrowserRouter>
-    </Provider>
-  </ApolloProvider>,
+    </Provider>,
   document.querySelector("#root")
 );

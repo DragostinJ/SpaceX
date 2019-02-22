@@ -21,7 +21,7 @@ const connectWithRetry = () => {
     mongoUserCredentials = `${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@`;
   }
 
-  const MONGO_URL = process.env.MONGO_URL || 'localhost:27017';
+  const MONGO_URL = process.env.MONGO_URL || 'https://young-garden-82503.herokuapp.com/';
   const DB_NAME = process.env.MONGO_DB_NAME || 'mongoPlay';
   const MONGO_CONNECTION_STRING = `mongodb://${mongoUserCredentials}${MONGO_URL}/${DB_NAME}`;
 
