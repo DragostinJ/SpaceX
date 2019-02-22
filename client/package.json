@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "homepage": "http://dragostinj.github.io/spacex",
+  "homepage": "http://dragostinj.github.io/SpaceX/",
   "private": true,
   "engines": {
 "npm": "6.8.0",
