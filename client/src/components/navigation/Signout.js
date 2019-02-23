@@ -1,5 +1,5 @@
 import React from "react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import * as actions from "../../actions";
 
 class Signout extends React.Component {
@@ -8,7 +8,13 @@ class Signout extends React.Component {
   };
 
   render() {
-    return <div>Test</div>;
+    return (
+      <div>
+        <span style={{ "font-size": "48px" }} className="badge badge-success">
+          You have logged out successfully
+        </span>{" "}
+      </div>
+    );
   }
 }
 

@@ -8,7 +8,7 @@ export default ({ children }) => {
     <div>
       {/* <Launches></Launches> */}
       <Header />
-      <div>
+      <div className="container">
         <ul>
           <Link to="/" className="btn btn-secondary">
             Home

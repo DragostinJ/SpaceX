@@ -42,20 +42,21 @@ ReactDOM.render(
       <ApolloProvider client={client}>
         <App>
           <div className="container">
-            <Route exact path="/" component={Welcome} />
-            <Route exact path="/signup" component={Signup} />
-            <Route exact path="/signin" component={Signin} />
-            <Route exact path="/signout" component={Signout} />
-            <Route exact path="/launches" component={Launches} />
-            <Route exact path="/launch/:flight_number" component={Launch} />
-            <Route exact path="/rocket/:rocket_id" component={Rocket} />
-            <Route exact path="/rockets" component={Rockets} />
-            <Route exact path="/missions" component={Missions} />
-            <Route exact path="/missions/:mission_id" component={Mission} />
-            <Route exact path="/payloads" component={Payloads} />
-            <Route exact path="/payloads/:payload_id" component={Payload} />
+            <Route exact path={process.env.PUBLIC_URL +  "/" }component={Welcome} />
+            <Route exact path={process.env.PUBLIC_URL +  "/signup" }component={Signup} />
+            <Route exact path={process.env.PUBLIC_URL +  "/signin"} component={Signin} />
+            <Route exact path={process.env.PUBLIC_URL +  "/signout" }component={Signout} />
+            <Route exact path={process.env.PUBLIC_URL +  "/launches" }component={Launches} />
+            <Route exact path={process.env.PUBLIC_URL +  "/launch/:flight_number" }component={Launch} />
+            <Route exact path={process.env.PUBLIC_URL +  "/rocket/:rocket_id"} component={Rocket} />
+            <Route exact path={process.env.PUBLIC_URL +  "/rockets"} component={Rockets} />
+            <Route exact path={process.env.PUBLIC_URL +  "/missions"} component={Missions} />
+            <Route exact path={process.env.PUBLIC_URL +  "/missions/:mission_id" }component={Mission} />
+            <Route exact path={process.env.PUBLIC_URL +  "/payloads" }component={Payloads} />
+            <Route exact path={process.env.PUBLIC_URL +  "/payloads/:payload_id" }component={Payload} />
             {/* <Route exact path="/feature" component={Feature} /> */}
-            <Route exact path="/feature" component={RocketMarket} />
+            <Route exact path={process.env.PUBLIC_URL +  "/feature"} component={RocketMarket} />
+           {/* <Route path={process.env.PUBLIC_URL + '/'}></Route> */}
           </div>
         </App>
       </ApolloProvider>
