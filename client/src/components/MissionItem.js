@@ -25,7 +25,7 @@ function MissionItem({
         </div>
         <div className="col-md-3">
           <Link to={`/missions/${mission_id}`} className="btn btn-secondary">
-            Rocket Detail:{" "}
+            Mission Detail:{" "}
           </Link>
 
           {/* later to be a LINK */}

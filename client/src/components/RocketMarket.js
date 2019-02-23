@@ -2,25 +2,38 @@ import React, { Fragment } from "react";
 
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
-import RocketItem from "./RocketItem";
 import { Link } from "react-router-dom";
+import RocketItem2 from "./RocketItem2";
 
 const ROCKETS_QUERY = gql`
   query RocketsQuery {
     rockets {
       rocket_id
+      country
       rocket_name
       rocket_type
+      success_rate_pct
+      cost_per_launch
+      first_flight 
+      height{
+        meters
+        feet
+      }
     }
   }
 `;
 
-class Rockets extends React.Component {
+class RocketMarket extends React.Component {
   render() {
     return (
       <Fragment>
-        <h1 className="display-4 my-3">Rockets</h1>
-
+        <div className="alert alert-dismissible alert-danger">
+          <button type="button" className="close" data-dismiss="alert">
+            &times;
+          </button>
+          <h4 className="alert-heading">Warning!</h4>
+          <p className="mb-0"> Black market for ROCKETS</p>
+        </div>
         <Query query={ROCKETS_QUERY}>
           {({ loading, error, data }) => {
             if (loading) return <h4>Loading ...</h4>; // TODO: add a spinner
@@ -30,7 +43,7 @@ class Rockets extends React.Component {
             return (
               <Fragment>
                 {data.rockets.map(rocket => (
-                  <RocketItem key={rocket.rocket_id} rocket={rocket} />
+                  <RocketItem2 key={rocket.rocket_id} rocket={rocket} />
                 ))}
               </Fragment>
             );
@@ -43,4 +56,5 @@ class Rockets extends React.Component {
     );
   }
 }
-export default Rockets;
+
+export default RocketMarket;

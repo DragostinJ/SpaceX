@@ -49,11 +49,6 @@ export class Rocket extends Component {
   render() {
     let { rocket_id } = this.props.match.params;
 
-    // const PopupExample =  () => (
-    //   <Popup trigger={<button> Trigger</button>} position="right center">
-    //     <div>Popup content here !!</div>
-    //   </Popup>
-    // )
 
     return (
       <div className="rocket-container">

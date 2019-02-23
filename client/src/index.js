@@ -16,6 +16,7 @@ import Mission from "../src/components/Mission";
 import Payloads from "../src/components/Payloads";
 import Payload from "../src/components/Payload";
 import Rockets from "../src/components/Rockets";
+import RocketMarket from "../src/components/RocketMarket";
 
 import Feature from "../src/components/Feature";
 
@@ -37,8 +38,8 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <Provider store={store}>
-      <BrowserRouter>
-  <ApolloProvider client={client}>
+    <BrowserRouter>
+      <ApolloProvider client={client}>
         <App>
           <div className="container">
             <Route exact path="/" component={Welcome} />
@@ -53,11 +54,12 @@ ReactDOM.render(
             <Route exact path="/missions/:mission_id" component={Mission} />
             <Route exact path="/payloads" component={Payloads} />
             <Route exact path="/payloads/:payload_id" component={Payload} />
-            <Route exact path="/feature" component={Feature} />
+            {/* <Route exact path="/feature" component={Feature} /> */}
+            <Route exact path="/feature" component={RocketMarket} />
           </div>
         </App>
-  </ApolloProvider>
-      </BrowserRouter>
-    </Provider>,
+      </ApolloProvider>
+    </BrowserRouter>
+  </Provider>,
   document.querySelector("#root")
 );

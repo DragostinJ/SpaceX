@@ -21,12 +21,14 @@ const connectWithRetry = () => {
     mongoUserCredentials = `${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@`;
   }
 
-  const MONGO_URL = process.env.MONGO_URL || 'drago:898989@cluster12-shard-00-00-jq0fa.mongodb.net:27017,cluster12-shard-00-01-jq0fa.mongodb.net:27017,cluster12-shard-00-02-jq0fa.mongodb.net:27017/test?ssl=true&replicaSet=Cluster12-shard-0&authSource=admin&retryWrites=true';
+  // const MONGO_URL = process.env.MONGO_URL || 'drago:898989@cluster12-shard-00-00-jq0fa.mongodb.net:27017,cluster12-shard-00-01-jq0fa.mongodb.net:27017,cluster12-shard-00-02-jq0fa.mongodb.net:27017/test?ssl=true&replicaSet=Cluster12-shard-0&authSource=admin&retryWrites=true';
+  const MONGO_URL = process.env.MONGO_URL || 'localhost:27017';
   const DB_NAME = process.env.MONGO_DB_NAME || 'mongoPlay';
   const MONGO_CONNECTION_STRING = `mongodb://${mongoUserCredentials}${MONGO_URL}/${DB_NAME}`;
 
   mongoose
-    .connect(MONGO_CONNECTION_STRING, { useNewUrlParser: true })
+    // .connect(MONGO_CONNECTION_STRING, { useNewUrlParser: true })
+    .connect("mongodb://localhost:27017/mongoPlay", { useNewUrlParser: true })
     .then(() => {
       console.log("MongoDB is connected");
     })
