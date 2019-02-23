@@ -40,10 +40,3 @@ export const signout = () => {
   };
 };
 
-// export const signup = ({email, password})=> dispatch => {
-//     axios.post('http://localhost:5000/signup',{
-//         email: email,
-//         password: password
-//     } )
-
-// }
