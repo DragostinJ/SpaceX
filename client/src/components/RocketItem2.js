@@ -46,60 +46,51 @@ function RocketItem2({
   let cost = formatter.format(cost_per_launch);
 
   return (
-    
-     
-        <div className="card border-primary mb-3" style={{ maxWidth: "35rem" }}>
-          {/* <div className="card text-white bg-dark mb-3"> */}
-          <h3 className="card-header">{rocket_name}</h3>
-          <div className="card-body">
-            <h5 className="card-title">
-              Cost per launch:{" "}
-              <span className="badge badge-secondary">{cost}</span>
-            </h5>
-            <h5 className="card-title">
-              {" "}
-              Meters: <span className="badge badge-secondary">{meters}</span>{" "}
-              Feet: <span className="badge badge-secondary">{feet}</span>
-            </h5>
-            <img style={style} src={img} alt="Rocket" />
-            <h4 className="card-title">{rocket_id}</h4>
-            <p className="card-text">
-              First flignt on:{" "}
-              <span className="badge badge-secondary">{first_flight}</span>
-            </p>
-            {/* "text-" + (success_rate_pct=>"50" ? "success" : "danger") */}
-            <p className="card-text">
-              Success Rate:{" "}
-              <span
-                className={
-                  "badge badge-" +
-                  (success_rate_pct >= "50" ? "success" : "danger")
-                }
-              >
-                {success_rate_pct}
-              </span>
-            </p>
-          </div>
+    <div className="card border-primary mb-3" style={{ maxWidth: "35rem" }}>
+      {/* <div className="card text-white bg-dark mb-3"> */}
+      <h3 className="card-header">{rocket_name}</h3>
+      <div className="card-body">
+        <h5 className="card-title">
+          Cost per launch: <span className="badge badge-secondary">{cost}</span>
+        </h5>
+        <h5 className="card-title">
+          {" "}
+          Meters: <span className="badge badge-secondary">
+            {meters}
+          </span> Feet: <span className="badge badge-secondary">{feet}</span>
+        </h5>
+        <img style={style} src={img} alt="Rocket" />
+        <h4 className="card-title">{rocket_id}</h4>
+        <p className="card-text">
+          First flignt on:{" "}
+          <span className="badge badge-secondary">{first_flight}</span>
+        </p>
+        {/* "text-" + (success_rate_pct=>"50" ? "success" : "danger") */}
+        <p className="card-text">
+          Success Rate:{" "}
+          <span
+            className={
+              "badge badge-" + (success_rate_pct >= "50" ? "success" : "danger")
+            }
+          >
+            {success_rate_pct}
+          </span>
+        </p>
+      </div>
 
-          {/* /////// */}
-          <div className="row mx-2">
-            <div className="col-md-9">
-              <h4>
-                Country:{" "}
-                <span className="badge badge-secondary">{country}</span>
-              </h4>
-            </div>
-            <div className="col-md-3">
-              <Link to={`/rocket/${rocket_id}`} className="btn btn-secondary">
-                Rocket Detail:{" "}
-              </Link>
-
-              {/* later to be a LINK */}
-            </div>
-          </div>
+      <div className="row mx-2">
+        <div className="col-md-9">
+          <h4>
+            Country: <span className="badge badge-secondary">{country}</span>
+          </h4>
         </div>
-     
-    
+        <div className="col-md-3">
+          <Link to={`/rocket/${rocket_id}`} className="btn btn-secondary">
+            Rocket Detail:{" "}
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }
 export default RocketItem2;
