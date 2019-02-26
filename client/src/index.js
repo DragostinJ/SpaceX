@@ -38,7 +38,8 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter  basename={process.env.PUBLIC_URL}>
+    {/* See if new basename works */}
       <ApolloProvider client={client}>
         <App>
           <div className="container">
