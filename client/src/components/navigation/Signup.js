@@ -16,11 +16,11 @@ class Signup extends React.Component {
     return (
       <form onSubmit={handleSubmit(this.onSubmit)}>
         <fieldset>
-          <label htmlFor="">Email</label>
-          <Field name="email" type="text" component="input" />
+          <label htmlFor="email">Email</label>
+          <Field name="email" type="email" component="input" />
         </fieldset>
         <fieldset>
-          <label htmlFor="">Password</label>
+          <label htmlFor="password">Password</label>
           <Field name="password" type="password" component="input" />
         </fieldset>
         <div>{this.props.errorMessage}</div>

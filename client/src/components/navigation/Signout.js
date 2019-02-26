@@ -10,7 +10,7 @@ class Signout extends React.Component {
   render() {
     return (
       <div>
-        <span style={{ "font-size": "48px" }} className="badge badge-success">
+        <span style={{ fontSize: "48px" }} className="badge badge-success">
           You have logged out successfully
         </span>{" "}
       </div>

@@ -4,6 +4,7 @@ import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import { Link } from "react-router-dom";
 import RocketItem2 from "./RocketItem2";
+import requireAuth from "./navigation/requireAuth";
 
 const ROCKETS_QUERY = gql`
   query RocketsQuery {
@@ -57,4 +58,4 @@ class RocketMarket extends React.Component {
   }
 }
 
-export default RocketMarket;
+export default requireAuth(RocketMarket);

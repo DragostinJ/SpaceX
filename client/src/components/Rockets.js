@@ -36,7 +36,7 @@ class Rockets extends React.Component {
             );
           }}
         </Query>
-        <Link to="/" className="btn btn-primary">
+        <Link to="/" className="btn btn-secondary">
           Back
         </Link>
       </Fragment>

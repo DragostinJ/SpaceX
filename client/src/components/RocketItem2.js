@@ -54,12 +54,12 @@ function RocketItem2({
           <div className="card-body">
             <h5 className="card-title">
               Cost per launch:{" "}
-              <span className="badge badge-success">{cost}</span>
+              <span className="badge badge-secondary">{cost}</span>
             </h5>
             <h5 className="card-title">
               {" "}
-              Meters: <span className="badge badge-success">{meters}</span>{" "}
-              Feet: <span className="badge badge-success">{feet}</span>
+              Meters: <span className="badge badge-secondary">{meters}</span>{" "}
+              Feet: <span className="badge badge-secondary">{feet}</span>
             </h5>
             <img style={style} src={img} alt="Rocket" />
             <h4 className="card-title">{rocket_id}</h4>

@@ -16,13 +16,13 @@ export default ({ children }) => {
           <Link to="/rockets" className="btn btn-danger">
             Rockets
           </Link>
-          <Link to="/missions" className="btn btn-success">
+          <Link to="/missions" className="btn btn-secondary">
             Missions
           </Link>
-          <Link to="/launches" className="btn btn-success">
+          <Link to="/launches" className="btn btn-secondary">
             Launches
           </Link>
-          <Link to="/payloads" className="btn btn-success">
+          <Link to="/payloads" className="btn btn-secondary">
             Payloads
           </Link>
         </ul>

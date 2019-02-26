@@ -12,16 +12,16 @@ export default () => {
         </p>
         <hr className="my-4" />
         <p className="tech-description">
-          It is made with <span className="badge badge-primary">React.js</span>{" "}
+          It is made with <span className="badge badge-secondary">React.js</span>{" "}
           on GitPages ,{" "}
-          <span className="badge badge-primary"> MongoDB</span> (serverless on
-          Atlas), <span className="badge badge-primary">Node.js</span> with{" "}
-          <span className="badge badge-primary">Express.js</span> and <span className="badge badge-primary">GraphQL</span> -
-          deployed on <span className="badge badge-primary">Heroku</span>
+          <span className="badge badge-secondary"> MongoDB</span> (serverless on
+          Atlas), <span className="badge badge-secondary">Node.js</span> with{" "}
+          <span className="badge badge-secondary">Express.js</span> and <span className="badge badge-secondary">GraphQL</span> -
+          deployed on <span className="badge badge-secondary">Heroku</span>
         </p>
         <p className="lead">
           <a
-            className="btn btn-primary btn-lg"
+            className="btn btn-secondary btn-lg"
             href="https://en.wikipedia.org/wiki/SpaceX"
             role="button"
           >
