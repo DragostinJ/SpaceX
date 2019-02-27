@@ -4,13 +4,14 @@
   "homepage": "http://dragostinj.github.io/SpaceX/",
   "private": true,
   "engines": {
-"npm": "6.8.0",
-"node": "9.10.1"
+    "npm": "6.8.0",
+    "node": "9.10.1"
   },
   "dependencies": {
     "apollo-boost": "^0.1.27",
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
+    "d3-scale": "^2.2.2",
     "graphql": "^14.1.1",
     "moment": "^2.24.0",
     "react": "^16.8.1",
@@ -27,7 +28,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

@@ -8,7 +8,7 @@ const requireAuth = passport.authenticate('jwt', {session: false}) // no session
 const requireSignin = passport.authenticate('local', {session: false})
 
 module.exports = function(app) {
-    //change the path  later - we dont want every1 on the app to be logged
+  
 
     //adding new routes - route + requireAuth + end
     app.get('/', requireAuth, function(req, res){

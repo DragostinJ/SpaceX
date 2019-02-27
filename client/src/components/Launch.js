@@ -24,9 +24,11 @@ export class Launch extends Component {
   render() {
     let { flight_number } = this.props.match.params;
     flight_number = parseInt(flight_number);
-    
-   
+    // let {launch_success} = this.props.match.params
 
+
+    //  console.log(flight_number);
+     
     return (
       <Fragment>
         <Query query={LAUNCH_QUERY} variables={{ flight_number }}>
@@ -41,7 +43,10 @@ export class Launch extends Component {
               launch_success,
               rocket: { rocket_id, rocket_name, rocket_type }
             } = data.launch;
-
+           
+            
+            
+            
             return (
               <div>
                 <h1 className="display-4 my-3">

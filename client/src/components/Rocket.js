@@ -79,7 +79,7 @@ export class Rocket extends Component {
                 propellant_2
               }
             } = data.rocket;
-
+            
             return (
               <div>
                 <div>

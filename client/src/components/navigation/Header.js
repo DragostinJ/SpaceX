@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
+
 class Header extends React.Component {
   renderLinks() {
     if (this.props.authenticated) {
@@ -23,6 +24,7 @@ class Header extends React.Component {
     } else {
       return (
         <React.Fragment>
+           
           <li className="nav-item">
             <Link className="nav-link" to="/signin">
               Sign in
