@@ -1,7 +1,7 @@
 {
   "main.css": "/SpaceX/static/css/main.6a455c40.chunk.css",
-  "main.js": "/SpaceX/static/js/main.efc19f2c.chunk.js",
-  "main.js.map": "/SpaceX/static/js/main.efc19f2c.chunk.js.map",
+  "main.js": "/SpaceX/static/js/main.24d400ed.chunk.js",
+  "main.js.map": "/SpaceX/static/js/main.24d400ed.chunk.js.map",
   "static/js/1.d1ede516.chunk.js": "/SpaceX/static/js/1.d1ede516.chunk.js",
   "static/js/1.d1ede516.chunk.js.map": "/SpaceX/static/js/1.d1ede516.chunk.js.map",
   "runtime~main.js": "/SpaceX/static/js/runtime~main.d88a3dc7.js",
@@ -12,6 +12,6 @@
   "static/media/falcon9.jpg": "/SpaceX/static/media/falcon9.84ba82aa.jpg",
   "static/css/main.6a455c40.chunk.css.map": "/SpaceX/static/css/main.6a455c40.chunk.css.map",
   "index.html": "/SpaceX/index.html",
-  "precache-manifest.41ccb6cd912f3f50c3fbb78c194d1e8d.js": "/SpaceX/precache-manifest.41ccb6cd912f3f50c3fbb78c194d1e8d.js",
+  "precache-manifest.a005aa8e7cd2c7ac404598bab7215557.js": "/SpaceX/precache-manifest.a005aa8e7cd2c7ac404598bab7215557.js",
   "service-worker.js": "/SpaceX/service-worker.js"
 }
