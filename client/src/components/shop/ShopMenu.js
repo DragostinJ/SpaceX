@@ -11,6 +11,8 @@ import roadster from "../../images/market/roadster.jpg";
 import rockets from "../../images/market/rockets.jpg";
 import ship from "../../images/market/ship.jpg";
 
+import AnimationTest from '../navigation/animationTest/AnimationTest'
+
 import ShopItem from "./ShopItem";
 
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
@@ -39,13 +41,12 @@ function ShopMenu() {
     backgroundImage: `url(${bgColor})`
   };
 
-  let style2 = {
-    border: "1px solid red"
-  };
 
   return (
     <Container className="container2 rocket">
       <article style={style} className="experimentsHolder">
+    {/* <AnimationTest></AnimationTest> */}
+      
         <Row className="menu-ul">
           <ShopItem  change={() => {
             setbgColor(launches);
