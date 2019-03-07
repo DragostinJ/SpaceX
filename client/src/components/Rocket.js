@@ -49,7 +49,6 @@ export class Rocket extends Component {
   render() {
     let { rocket_id } = this.props.match.params;
 
-
     return (
       <div className="rocket-container">
         <Query query={ROCKET_QUERY} variables={{ rocket_id }}>
@@ -79,7 +78,7 @@ export class Rocket extends Component {
                 propellant_2
               }
             } = data.rocket;
-            
+
             return (
               <div>
                 <div>
@@ -125,19 +124,14 @@ export class Rocket extends Component {
                     </li>
                     <li className="list-group-item">Company: {company}</li>
 
-                    <li
-                     
-                      className="list-group-item"
-                    >
-                      Country: {country}
-                    </li>
+                    <li className="list-group-item">Country: {country}</li>
 
                     <li
                       onMouseEnter={this.toggleHidden.bind(this)}
                       onMouseLeave={this.toggleHidden.bind(this)}
                       className="list-group-item"
                     >
-                    {/* WHAT ABOUT MOBILE ? */}
+                      {/* WHAT ABOUT MOBILE ? */}
                       Engine:{" "}
                       {!this.state.isHidden && (
                         <Fragment>
@@ -162,11 +156,11 @@ export class Rocket extends Component {
                       )}
                     </li>
                   </ul>
-
                   <hr />
                   <Link to="/rockets" className="btn btn-secondary">
                     Back
                   </Link>
+                  ;
                 </div>
               </div>
             );

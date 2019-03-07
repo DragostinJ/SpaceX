@@ -13,3 +13,125 @@ bulding better payload  - find bootstrap compoonent to list all in a nice way
 Use all parameters from the query !
 
 
+capsules cores dragons 
+history info
+ landing pads launches
+ l;aunch pads Missions 
+ Payloads 
+ Rockets Roadster 
+Ships
+
+12
+
+
+<Col
+            style={menuItem}
+            className="menu-item justify-content-space-between"
+            xs={6}
+            md={4}
+            xl={2}
+          >
+            <Card 
+              onMouseOver={() => {
+                setbgStyle("black");
+                setbgColor(dragon);
+              }}
+              onMouseLeave={()=> {
+                   setbgStyle("black");
+              }}
+              style={cardStyle2}
+            >
+              <Card.Body style={bgSt}>
+                <Card.Title >Dragon</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col
+            style={menuItem}
+            className="menu-item justify-content-space-between"
+            xs={6}
+            md={4}
+            xl={2}
+          >
+            <Card style={cardStyle2}>
+              <Card.Body onMouseOver={() => setbgColor(launches)}>
+                <Card.Title>Launches</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col
+            style={menuItem}
+            className="menu-item justify-content-space-between"
+            xs={6}
+            md={4}
+            xl={2}
+          >
+            <Card style={cardStyle2}>
+              <Card.Body onMouseOver={() => setbgColor(roadster)}>
+                <Card.Title>roadster</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col
+            style={menuItem}
+            className="menu-item justify-content-space-between"
+            xs={6}
+            md={4}
+            xl={2}
+          >
+            <Card style={cardStyle2}>
+              <Card.Body onMouseOver={() => setbgColor(ship)}>
+                <Card.Title>Ship</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col
+            style={menuItem}
+            className="menu-item justify-content-space-between"
+            xs={6}
+            md={4}
+            xl={2}
+          >
+            <Card style={cardStyle2}>
+              <Card.Body onMouseOver={() => setbgColor(drones)}>
+                <Card.Title>drones</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col
+            style={menuItem}
+            className="menu-item justify-content-space-between"
+            xs={6}
+            md={4}
+            xl={2}
+          >
+            <Card style={cardStyle2}>
+              <Card.Body onMouseOver={() => setbgColor(dragon2)}>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>

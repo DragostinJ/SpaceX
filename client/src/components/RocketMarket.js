@@ -5,6 +5,7 @@ import { Query } from "react-apollo";
 import { Link } from "react-router-dom";
 import RocketItem2 from "./RocketItem2";
 import requireAuth from "./navigation/requireAuth";
+import { Container, Row, Col } from "react-bootstrap";
 
 const ROCKETS_QUERY = gql`
   query RocketsQuery {
@@ -15,8 +16,8 @@ const ROCKETS_QUERY = gql`
       rocket_type
       success_rate_pct
       cost_per_launch
-      first_flight 
-      height{
+      first_flight
+      height {
         meters
         feet
       }
@@ -42,11 +43,13 @@ class RocketMarket extends React.Component {
             if (error) console.log(error);
 
             return (
-              <Fragment>
-                {data.rockets.map(rocket => (
-                  <RocketItem2 key={rocket.rocket_id} rocket={rocket} />
-                ))}
-              </Fragment>
+              <Container>
+                <Row>
+                  {data.rockets.map(rocket => (
+                    <RocketItem2 key={rocket.rocket_id} rocket={rocket} />
+                  ))}
+                </Row>
+              </Container>
             );
           }}
         </Query>

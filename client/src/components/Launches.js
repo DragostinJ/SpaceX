@@ -5,7 +5,6 @@ import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import MissonKey from "./MissionKey";
 import { Link } from "react-router-dom";
-import BarCharts from '../components/BarCharts'
 
 const LAUNCHES_QUERY = gql`
   query LaunchesQuery {
@@ -45,7 +44,6 @@ class Launches extends React.Component {
             return (
               
               <Fragment>
-                <BarCharts data={[countFalse, countSuccess]} size={[200,200]} />
                 {data.launches.map(launch => (
                   <LaunchItem key={launch.flight_number} launch={launch} />
                 ))}

@@ -3,6 +3,7 @@ import gql from "graphql-tag";
 
 import { Link } from "react-router-dom";
 import { Query } from "react-apollo";
+import { Col } from "react-bootstrap";
 
 const ROCKET_ITEM = gql`
   query RocketQuery($rocket_id: String!) {
@@ -38,10 +39,7 @@ export class RocketMarket extends React.Component {
     let { rocket_id } = this.props.match.params;
 
     return (
-      <div
-        className="card text-white bg-primary mb-3 d-inline"
-       
-      >
+      <Col xl="4" md="4">
         <Query query={ROCKET_ITEM} variables={{ rocket_id }}>
           {({ loading, error, data }) => {
             if (loading) return <h4>Loading</h4>;
@@ -70,7 +68,7 @@ export class RocketMarket extends React.Component {
               }
             } = data.rocket;
             return (
-              <div>
+              <Col>
                 <div className="card-header">Header</div>
                 <div className="card-body">
                   <h4 className="card-title">Primary card title</h4>
@@ -79,12 +77,12 @@ export class RocketMarket extends React.Component {
                     up the bulk of the card's content.
                   </p>
                 </div>
-              </div>
+              </Col>
             );
           }}
         </Query>
-      </div>
+      </Col>
     );
   }
 }
-export default RocketMarket
+export default RocketMarket;

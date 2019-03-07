@@ -24,6 +24,8 @@ import Welcome from "../src/components/navigation/Welcome";
 import Signup from "../src/components/navigation/Signup";
 import Signout from "../src/components/navigation/Signout";
 import Signin from "../src/components/navigation/Signin";
+import Shop from '../src/components/shop/Shop'
+import ShopMenu from '../src/components/shop/ShopMenu'
 
 import App from "./components/App";
 
@@ -38,12 +40,14 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter  basename="/SpaceX/">
+    {/* <BrowserRouter  basename="/SpaceX/"> */}
+    <BrowserRouter>
     {/* See if new basename works */}
       <ApolloProvider client={client}>
         <App>
           <div className="container">
           <Route exact path="/" component={Welcome} />
+            <Route exact path="/shop" component={Shop} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/signin" component={Signin} />
             <Route exact path="/signout" component={Signout} />
@@ -57,6 +61,7 @@ ReactDOM.render(
             <Route exact path="/payloads/:payload_id" component={Payload} />
             {/* <Route exact path="/feature" component={Feature} /> */}
             <Route exact path="/feature" component={RocketMarket} />
+            <Route exact path="/shopmenu" component={ShopMenu} />
           </div>
         </App>
       </ApolloProvider>
