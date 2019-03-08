@@ -26,6 +26,8 @@ import Signout from "../src/components/navigation/Signout";
 import Signin from "../src/components/navigation/Signin";
 import Shop from '../src/components/shop/Shop'
 import ShopMenu from '../src/components/shop/ShopMenu'
+import Theme from '../src/components/navigation/theme/index'
+
 
 import App from "./components/App";
 
@@ -62,6 +64,7 @@ ReactDOM.render(
             {/* <Route exact path="/feature" component={Feature} /> */}
             <Route exact path="/feature" component={RocketMarket} />
             <Route exact path="/shopmenu" component={ShopMenu} />
+            <Route exact path="/theme" component={Theme} />
           </div>
         </App>
       </ApolloProvider>

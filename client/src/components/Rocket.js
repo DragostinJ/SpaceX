@@ -3,6 +3,8 @@ import gql from "graphql-tag";
 
 import { Query } from "react-apollo";
 import { Link } from "react-router-dom";
+        
+import Theme from './navigation/theme/index'
 
 import "../css/Rocket.css";
 

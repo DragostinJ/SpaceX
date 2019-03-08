@@ -1,4 +1,4 @@
-import React, { useState, useCallback} from "react";
+import React, { useState} from "react";
 import "../../css/ShopMenu.css";
 import falcon1 from "../../images/falcon1.jpg";
 import falcon9 from "../../images/falconHeavy.jpg";
@@ -45,8 +45,10 @@ function ShopMenu() {
   return (
     <Container className="container2 rocket">
       <article style={style} className="experimentsHolder">
-    {/* <AnimationTest></AnimationTest> */}
+    {/* <AnimationTest>
       
+    </AnimationTest>
+       */}
         <Row className="menu-ul">
           <ShopItem  change={() => {
             setbgColor(launches);
