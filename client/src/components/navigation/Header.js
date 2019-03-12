@@ -2,8 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import Theme from '../navigation/theme/index'
-
+import Theme from "../navigation/theme/index";
 
 class Header extends React.Component {
   renderLinks() {
@@ -25,7 +24,11 @@ class Header extends React.Component {
     } else {
       return (
         <React.Fragment>
-           
+          <li className="nav-item">
+            <Link className="nav-link" to="/shopmenu">
+              Shop Menu
+            </Link>
+          </li>
           <li className="nav-item">
             <Link className="nav-link" to="/signin">
               Sign in
@@ -81,7 +84,7 @@ class Header extends React.Component {
                 </Link>
               </li>
             </ul>
-            <Theme></Theme>
+            <Theme />
             <form className="form-inline my-2 my-lg-0">
               <input
                 className="form-control mr-sm-2"
@@ -91,7 +94,6 @@ class Header extends React.Component {
               <button className="btn btn-secondary my-2 my-sm-0" type="submit">
                 Search
               </button>
-                
             </form>
           </div>
         </nav>

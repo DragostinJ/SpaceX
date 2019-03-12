@@ -10,6 +10,7 @@ import drones from "../../images/market/drones.jpg";
 import roadster from "../../images/market/roadster.jpg";
 import rockets from "../../images/market/rockets.jpg";
 import ship from "../../images/market/ship.jpg";
+import falcon from "../../images/market/falcon1.jpg";
 
 import AnimationTest from '../navigation/animationTest/AnimationTest'
 

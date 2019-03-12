@@ -5,6 +5,7 @@ import { Query } from "react-apollo";
 import { Link } from "react-router-dom";
         
 import Theme from './navigation/theme/index'
+// import AnimationTest from './navigation/animationTest/AnimationTest'
 
 import "../css/Rocket.css";
 
@@ -84,6 +85,7 @@ export class Rocket extends Component {
             return (
               <div>
                 <div>
+                {/* <AnimationTest></AnimationTest> */}
                   <h3 className="display-4 my-3">
                     <span className="text-dark">Rocket Name: </span>
                     <span className="text-success">{rocket_name}</span>

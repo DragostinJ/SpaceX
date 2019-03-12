@@ -7,5 +7,4 @@ export default combineReducers({
     auth: auth,
     form: formReducer
 })
-// asdasdasconst 
 

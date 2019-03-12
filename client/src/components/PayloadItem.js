@@ -33,22 +33,5 @@ function PayloadItem({
     </div>
   );
 
-  // return (
-  //   <div className="container">
-  //         <h2>Mission: <span className={"badge badge-" + (launch_success ? 'success' : 'danger')}>{mission_name}</span> </h2>
-
-  //   </div>
-
-  // )
-  //     return (
-  //         <div className="card" >
-  //   <div className="card-body">
-  //     <h5 className="card-title">{mission_name}</h5>
-
-  //     <h2>Mission: <span className={"badge badge-" + (launch_success ? 'success' : 'danger')}>{mission_name}</span> </h2>
-  //     <p className="card-text">{launch_date_local}</p>
-
-  //   </div>
-  // </div>
 }
 export default PayloadItem;
