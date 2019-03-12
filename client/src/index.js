@@ -42,8 +42,8 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <Provider store={store}>
-    {/* <BrowserRouter  basename="/SpaceX/"> */}
-    <BrowserRouter>
+    <BrowserRouter  basename="/SpaceX/">
+    {/* <BrowserRouter> */}
     {/* See if new basename works */}
       <ApolloProvider client={client}>
         <App>
