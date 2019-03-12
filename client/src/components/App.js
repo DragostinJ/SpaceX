@@ -13,6 +13,9 @@ export default ({ children }) => {
           <Link to="/" className="btn btn-secondary">
             Home
           </Link>
+          <Link to="/shopmenu" className="btn btn-secondary">
+            Home
+          </Link>
           <Link to="/rockets" className="btn btn-danger">
             Rockets
           </Link>
