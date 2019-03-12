@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/SpaceX/static/media/launching.ea0fe6f2.jpg"
   },
   {
-    "revision": "f9f959632c014340ef4d",
+    "revision": "c117d639b5d81b283075",
     "url": "/SpaceX/static/css/main.aeb63a5a.chunk.css"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/SpaceX/static/media/bigFrocket.7d561900.jpg"
   },
   {
-    "revision": "f9f959632c014340ef4d",
-    "url": "/SpaceX/static/js/main.f9f95963.chunk.js"
+    "revision": "c117d639b5d81b283075",
+    "url": "/SpaceX/static/js/main.c117d639.chunk.js"
   },
   {
     "revision": "0d1d7fe75fc1fa3a30d0fb74df96fa1a",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/SpaceX/static/media/falcon1.17a56306.jpg"
   },
   {
-    "revision": "0ca55ba7986cc602e2b0be3e1a38fec3",
+    "revision": "d837e2f62fa946687ea0c0226c1ee40c",
     "url": "/SpaceX/index.html"
   }
 ];
